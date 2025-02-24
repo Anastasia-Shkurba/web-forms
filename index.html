@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Web Forms</title>
+</head>
+
+<body>
+  <main>
+    <div>
+      <form action="POST">
+        <h2>Create an Account</h2>
+
+        <div>
+          <label>
+            First Name
+            <input type="text" name="fname" required>
+          </label>
+          <label>
+            Last Name
+            <input type="text" name="lname" required>
+          </label>
+        </div>
+        <label>
+          E-mail
+          <input type="email" name="email" required>
+        </label>
+        <p>We never share your email with anyone else.</p>
+
+        <label>
+          <input type="radio" name="gender" value="m" required>
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="f" required>
+          Female
+        </label>
+
+        <div>
+          <label for="country">Country</label>
+          <select name="country" id="country" required>
+            <option value="" disabled selected>Select</option>
+            <option value="ukr">Ukraine</option>
+            <option value="uk">United Kingdom</option>
+            <option value="us">United States</option>
+            <option value="can">Canada</option>
+            <option value="mx">Mexico</option>
+            <option value="other">Other</option>
+          </select>
+          <label>
+            City
+            <input type="text" name="city" required>
+          </label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <p>By clicking the 'Sign Up' button, you confirm that you accept our Terms of Use and Privacy Policy</p>
+
+      <div>
+        <p>Have an account?</p>
+        <a href="">Log In</a>
+      </div>
+    </div>
+
+    <div>
+      <form action="POST">
+        <h2>Profile</h2>
+
+        <img src="img/profile-photo.png" alt="profile-photo">
+        <label>
+          <img src="img/icon-photo.svg" alt="icon-photo">
+          <input type="file" name="profile-photo">
+        </label>
+        <button type="button">
+          <img src="img/icon-delete.svg" alt="icon-delete">
+        </button>
+        <p>Up to 1 MB (300x300 px)</p>
+
+        <div>
+          <label>
+            Name
+            <input type="text" name="name-updated">
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email-updated">
+          </label>
+        </div>
+
+        <div>
+          <label for="country">Country</label>
+          <select name="country" id="country" required>
+            <option value="" disabled selected>Select</option>
+            <option value="ukr">Ukraine</option>
+            <option value="uk">United Kingdom</option>
+            <option value="us">United States</option>
+            <option value="can">Canada</option>
+            <option value="mx">Mexico</option>
+            <option value="other">Other</option>
+          </select>
+          <label>
+            City
+            <input type="text" name="city" required>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Zip Code
+            <input type="number" name="zip-code">
+          </label>
+          <label>
+            Phone Number
+            <input type="tel" name="phone">
+          </label>
+        </div>
+
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
