@@ -17,25 +17,31 @@
 </head>
 
 <body>
-  <main>
-    <div>
-      <form action="POST">
-        <h2>Create an Account</h2>
+  <main class="forms">
+    <div class="form-block forms__form-block">
+      <form class="form-block__form" action="POST">
+        <h2 class="form-block__title">Create an Account</h2>
 
-        <div>
-          <label>
-            First Name
-            <input type="text" name="fname" required>
-          </label>
-          <label>
-            Last Name
-            <input type="text" name="lname" required>
-          </label>
+        <div class="form-block__input-pair">
+          <div class="form-block__field">
+            <label class="form-block__label" for="fname">
+              First Name
+            </label>
+            <input class="form-block__input" id="fname" type="text" name="fname" required>
+          </div>
+
+          <form-block__input>
+            <label class="form-block__label" for="lname">
+              Last Name
+            </label>
+            <input id="lname" type="text" name="lname" required>
+          </form-block__input>
         </div>
-        <label>
+
+        <label for="email">
           E-mail
-          <input type="email" name="email" required>
         </label>
+        <input id="email" type="email" name="email" required>
         <p>We never share your email with anyone else.</p>
 
         <label>
@@ -58,10 +64,10 @@
             <option value="mx">Mexico</option>
             <option value="other">Other</option>
           </select>
-          <label>
+          <label for="city">
             City
-            <input type="text" name="city" required>
           </label>
+          <input id="city" type="text" name="city" required>
         </div>
 
         <button type="submit">Sign Up</button>
