@@ -30,19 +30,19 @@
             <input class="form-block__input" id="fname" type="text" name="fname" required>
           </div>
 
-          <form-block__input>
+          <div class="form-block__field">
             <label class="form-block__label" for="lname">
               Last Name
             </label>
-            <input id="lname" type="text" name="lname" required>
-          </form-block__input>
+            <input class="form-block__input" id="lname" type="text" name="lname" required>
+          </div>
         </div>
 
-        <label for="email">
+        <label class="form-block__label" for="email">
           E-mail
         </label>
-        <input id="email" type="email" name="email" required>
-        <p>We never share your email with anyone else.</p>
+        <input class="form-block__input" id="email" type="email" name="email" required>
+        <p class="form-block__text">We'll never share your email with anyone else.</p>
 
         <label>
           <input type="radio" name="gender" value="m" required>
@@ -53,21 +53,25 @@
           Female
         </label>
 
-        <div>
-          <label for="country">Country</label>
-          <select name="country" id="country" required>
-            <option value="" disabled selected>Select</option>
-            <option value="ukr">Ukraine</option>
-            <option value="uk">United Kingdom</option>
-            <option value="us">United States</option>
-            <option value="can">Canada</option>
-            <option value="mx">Mexico</option>
-            <option value="other">Other</option>
-          </select>
-          <label for="city">
-            City
-          </label>
-          <input id="city" type="text" name="city" required>
+        <div class="form-block__input-pair">
+          <div class="form-block__field">
+            <label class="form-block__label" for="country">Country</label>
+            <select class="form-block__input" name="country" id="country" required>
+              <option value="" disabled selected>Select</option>
+              <option value="ukr">Ukraine</option>
+              <option value="uk">United Kingdom</option>
+              <option value="us">United States</option>
+              <option value="can">Canada</option>
+              <option value="mx">Mexico</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-block__field">
+            <label class="form-block__label" for="city">
+              City
+            </label>
+            <input class="form-block__input" id="city" type="text" name="city" required>
+          </div>
         </div>
 
         <button type="submit">Sign Up</button>

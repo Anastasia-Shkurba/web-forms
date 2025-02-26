@@ -18,6 +18,7 @@ body {
   max-width: 570px;
   height: 590px;
   padding: 35px 35px 16px;
+  box-sizing: border-box;
 }
 
 .form-block__title {
@@ -33,6 +34,12 @@ body {
   gap: 12px;
 }
 
+.form-block__field {
+  flex: 1;
+  min-width: 160px;
+  max-width: 245px;
+}
+
 .form-block__label {
   display: block;
   font-family: "Roboto", sans-serif;
@@ -45,7 +52,30 @@ body {
 }
 
 .form-block__input {
-  width: 245px;
+  width: 100%;
   height: 38px;
   box-sizing: border-box;
+  border-radius: 6px;
+  border: 2px solid #E4E4E4;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #545454;
+}
+
+.form-block__input:focus {
+  outline: 2px solid #007BFF;
+  border-color: transparent;
+  offset: 10px;
+}
+
+.form-block__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #969696;
 }
