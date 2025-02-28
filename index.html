@@ -38,20 +38,25 @@
           </div>
         </div>
 
-        <label class="form-block__label" for="email">
-          E-mail
-        </label>
-        <input class="form-block__input" id="email" type="email" name="email" required>
+        <div class="form-block__input-pair form-block__input-pair--wide">
+          <label class="form-block__label" for="email">
+            E-mail
+          </label>
+          <input class="form-block__input" id="email" type="email" name="email" required>
+        </div>
         <p class="form-block__text">We'll never share your email with anyone else.</p>
 
-        <label>
-          <input type="radio" name="gender" value="m" required>
-          Male
-        </label>
-        <label>
-          <input type="radio" name="gender" value="f" required>
-          Female
-        </label>
+        <div class="form-block__input-pair">
+          <input class="form-block__radio-input" id="male" type="radio" name="gender" value="m" required>
+          <label class="form-block__label form-block__label--radio" for="male">
+            Male
+          </label>
+          
+          <input class="form-block__radio-input" id="female" type="radio" name="gender" value="f" required>
+          <label class="form-block__label form-block__label--radio" for="female">
+            Female
+          </label>
+        </div>
 
         <div class="form-block__input-pair">
           <div class="form-block__field">
@@ -74,71 +79,93 @@
           </div>
         </div>
 
-        <button type="submit">Sign Up</button>
+        <button class="form-block__button" type="submit">Sign Up</button>
       </form>
 
-      <p>By clicking the 'Sign Up' button, you confirm that you accept our Terms of Use and Privacy Policy</p>
+      <p class="form-block__text form-block__text--center">By clicking the 'Sign Up' button, you confirm that you accept our <a class="form-block__link" href="./">Terms of Use</a> and <a class="form-block__link" href="./">Privacy Policy</a></p>
 
-      <div>
-        <p>Have an account?</p>
-        <a href="">Log In</a>
+      <div class="form-block__sighnin-info">
+        <p class="form-block__sighnin-text">Have an account?</p>
+        <a class="form-block__link form-block__link--sighnin" href="./">Log In</a>
       </div>
     </div>
 
-    <div>
-      <form action="POST">
-        <h2>Profile</h2>
+    <div class="form-block forms__form-block">
+      <form class="form-block__form" action="POST">
+        <h2 class="form-block__title">Profile</h2>
 
-        <img src="img/profile-photo.png" alt="profile-photo">
-        <label>
-          <img src="img/icon-photo.svg" alt="icon-photo">
-          <input type="file" name="profile-photo">
-        </label>
-        <button type="button">
-          <img src="img/icon-delete.svg" alt="icon-delete">
-        </button>
-        <p>Up to 1 MB (300x300 px)</p>
+        <div class="form-block__profile">
+          <img class="form-block__profile-photo" src="img/profile-photo.png" alt="profile-photo">
+          
+          <div class="form-block__profile-info">
+            <div class="form-block__prof-actions">
+              <div class="form-block__upload-pic">
+                <label class="form-block__pic-label" for="file-upload">
+                  <img class="form-block__pic-icon" src="img/icon-photo.svg" alt="icon-photo">
+                </label>
+                <input class="form-block__pic-input" id="file-upload" type="file" name="profile-photo">
+              </div>
+              <button class="form-block__action-button" type="button">
+                <img src="img/icon-delete.svg" alt="icon-delete">
+              </button>
+            </div>
 
-        <div>
-          <label>
-            Name
-            <input type="text" name="name-updated">
-          </label>
-          <label>
-            E-mail
-            <input type="email" name="email-updated">
-          </label>
+            <p class="form-block__text">Up to 1 MB (300x300 px)</p>
+          </div>
         </div>
 
-        <div>
-          <label for="country">Country</label>
-          <select name="country" id="country" required>
-            <option value="" disabled selected>Select</option>
-            <option value="ukr">Ukraine</option>
-            <option value="uk">United Kingdom</option>
-            <option value="us">United States</option>
-            <option value="can">Canada</option>
-            <option value="mx">Mexico</option>
-            <option value="other">Other</option>
-          </select>
-          <label>
-            City
-            <input type="text" name="city" required>
-          </label>
+        <div class="form-block__input-pair">
+          <div class="form-block__field">
+            <label class="form-block__label" for="name-updated">
+              Name
+            </label>
+            <input class="form-block__input" id="name-updated" type="text" name="name-updated">
+          </div>
+          <div class="form-block__field">
+            <label class="form-block__label" for="email-updated">
+              E-mail
+            </label>
+            <input class="form-block__input" id="email-updated" type="email" name="email-updated">
+          </div>
         </div>
 
-        <div>
-          <label>
-            Zip Code
-            <input type="number" name="zip-code">
-          </label>
-          <label>
-            Phone Number
-            <input type="tel" name="phone">
-          </label>
+        <div class="form-block__input-pair">
+          <div class="form-block__field">
+            <label class="form-block__label" for="country-updated">Country</label>
+            <select class="form-block__input" name="country" id="country-updated" required>
+              <option value="" disabled selected>Select</option>
+              <option value="ukr">Ukraine</option>
+              <option value="uk">United Kingdom</option>
+              <option value="us">United States</option>
+              <option value="can">Canada</option>
+              <option value="mx">Mexico</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-block__field">
+            <label class="form-block__label" for="city-updated">
+              City
+            </label>
+            <input class="form-block__input" id="city-updated" type="text" name="city" required>
+          </div>
         </div>
 
-        <button type="submit">Update</button>
+        <div class="form-block__input-pair">
+          <div class="form-block__field">
+            <label class="form-block__label" for="zip-code">
+              Zip Code
+            </label>
+            <input class="form-block__input" id="zip-code" type="number" name="zip-code">
+          </div>
+          <div class="form-block__field">
+            <label class="form-block__label" for="phone">
+              Phone Number
+            </label>
+            <input class="form-block__input" id="phone" type="tel" name="phone">
+          </div>
+        </div>
+
+        <button class="form-block__button form-block__button--small" type="submit">Update</button>
       </form>
     </div>
   </main>
